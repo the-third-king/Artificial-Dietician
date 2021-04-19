@@ -16,38 +16,27 @@ struct ContentView: View {
     @State private var calories: String = ""
     @State private var protien: String = ""
     @State private var carbs: String = ""
-    @State private var weight: String = ""
+    @State private var weight: String  = ""
     
     
     var body: some View {
         GeometryReader { geometry in
             VStack{
                 HStack{
-                    Image(systemName: "bell")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 16, height: 16)
-                        .padding(.top, 40)
-                        .padding(.leading, 10)
-                        //.overlay(NotificationNumLabel(number: $labelNumber))
-                        .onTapGesture{
-                            viewRouter.currentPage = .notification
-                        }
+                    TopBarIcon(viewRouter: viewRouter,
+                               assignedPage: .notification,
+                               edge: .leading,
+                               systemIconName: "bell")
                     Spacer()
                     Text("Artificial Dietician")
                         .bold()
                         .padding(.top, 40)
                         .font(Font.system(size: 25))
                     Spacer()
-                    Image(systemName: "person.crop.circle")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 16, height: 16)
-                        .padding(.top, 40)
-                        .padding(.trailing, 10)
-                        .onTapGesture{
-                            viewRouter.currentPage = .account
-                        }
+                    TopBarIcon(viewRouter: viewRouter,
+                               assignedPage: .account,
+                               edge: .trailing,
+                               systemIconName: "person.crop.circle")
                 }
                 .frame(width: geometry.size.width,
                        height: 70)
@@ -62,107 +51,38 @@ struct ContentView: View {
                 switch viewRouter.currentPage{
                 case.home:
                     VStack{
-                        Text("Home")
-                            .bold()
-                            .font(Font.system(size: 35))
-                            .padding(8)
-                            .overlay(RoundedRectangle(cornerRadius: 30)
-                                        .stroke(Color("Mint"), lineWidth: 5))
-                        HStack{
-                            Text("Calories Eaten Today: ")
-                                .padding()
-                            //Add calorie data from Database here
-                            Spacer()
-                        }
-                        .frame(width: 350,
-                               height: 70,
-                               alignment: .leading)
-                        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
-                                                   startPoint: .leading,
-                                                   endPoint: .trailing))
-                        .cornerRadius(50)
+                        PageLabelView(pageTitle: "Home")
                         
-                        HStack{
-                            Text("Amount of Protien: ")
-                                .padding()
-                            //Add protien data from database here
-                            Spacer()
-                        }
-                        .frame(width: 350,
-                               height: 70,
-                               alignment: .leading)
-                        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
-                                                   startPoint: .leading,
-                                                   endPoint: .trailing))
-                        .cornerRadius(50)
-                        .padding()
+                        BorderedTextView(informativeText: "Caloreies Eaten Today:")
+                    
+                        BorderedTextView(informativeText: "Amount of Protien: ")
                         
-                        HStack{
-                            Text("Amount of carborhydrates: ")
-                                .padding()
-                            //Add carbs data from database here
-                            Spacer()
-                        }
-                        .frame(width: 350,
-                               height: 70,
-                               alignment: .leading)
-                        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
-                                                   startPoint: .leading,
-                                                   endPoint: .trailing))
-                        .cornerRadius(50)
+                        BorderedTextView(informativeText: "Amount of Carbohydrates: ")
+                        
+                        BorderedTextView(informativeText: "Today's Weight: ")
                         
                         Spacer()
                     }
                     
                 case.mealEntry:
                     VStack{
-                        Text("Meal Entry")
-                            .bold()
-                            .font(Font.system(size: 35))
-                            .padding(8)
-                            .overlay(RoundedRectangle(cornerRadius: 30)
-                                        .stroke(Color("Mint"), lineWidth: 5))
-                        HStack{
-                            Text("Meal Type: ")
-                            Spacer()
-                            TextField("Meal Type", text: $mealName)
-                                .modifier(TextFieldClearButton(text: $mealName))
-                                .frame(width: 175, height: 25, alignment: .trailing)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .padding(.trailing, 4)
-                            //store meal type in database
-                        }
-                        HStack{
-                            Text("Amount of Calories: ")
-                            Spacer()
-                            TextField("Calories", text: $calories)
-                                .modifier(TextFieldClearButton(text: $calories))
-                                .frame(width: 175, height: 25, alignment: .trailing)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .padding(.trailing, 4)
-                            //Store calories into database
-                        }
-                        HStack{
-                            Text("Amount of Protien: ")
-                            Spacer()
-                            TextField("Protien", text: $protien)
-                                .modifier(TextFieldClearButton(text: $protien))
-                                .frame(width: 175, height: 25, alignment: .trailing)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .padding(.trailing, 4)
-                            //store protien into database
-                        }
-                        HStack{
-                            Text("Amount of Carbohydrates: ")
-                            Spacer()
-                            TextField("Carbohydrates", text: $carbs)
-                                .modifier(TextFieldClearButton(text: $carbs))
-                                .frame(width: 175, height: 25, alignment: .trailing)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .padding(.trailing, 4)
-                                
-                            //store carbs into database
-                        }
+                        PageLabelView(pageTitle: "Meal Entry")
+                        
+                        UserEnterView(text: "Meal Type",
+                                      textFieldText: "Meal Type",
+                                      enteredValue: $mealName)
+                        
+                        UserEnterView(text: "Amount of Calories",
+                                     textFieldText: "Calories",
+                                     enteredValue: $calories)
+                        
+                        UserEnterView(text: "Amount of Protien: ",
+                                      textFieldText: "Protien",
+                                      enteredValue: $protien)
+                        
+                        UserEnterView(text: "Amount of Carbohydrates: ",
+                                      textFieldText: "Carbohydrates",
+                                      enteredValue: $carbs)
                         
                         Button{
                             print("Information entered")
@@ -192,89 +112,33 @@ struct ContentView: View {
                     
                 case.weightEntry:
                     VStack{
-                        Text("Weight")
-                            .bold()
-                            .font(Font.system(size: 35))
-                            .padding(8)
-                            .overlay(RoundedRectangle(cornerRadius: 30)
-                                        .stroke(Color("Mint"), lineWidth: 5))
-                        HStack{
-                            Text("New Weight: ")
-                            TextField("Weight", text: $weight)
-                                .modifier(TextFieldClearButton(text: $weight))
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .padding()
+                        PageLabelView(pageTitle: "Weight")
+                        
+                        UserEnterView(text: "New Weight:",
+                                      textFieldText: "Weight",
+                                      enteredValue: $weight)
+                        Button{
+                            //TODO: put the wieght into the database
+                            print("weight entered")
+                        }label: {
+                            Text("Confirm Weight")
                         }
+                        Spacer()
                     }
-                    
-                    
                     Divider().frame(height: 5).background(Color("Mint"))
+                    
                     VStack{
                         Text("Previous Weights")
                             .font(Font.system(size: 30))
-                        HStack{
-                            Text("Day 1")
-                                .padding()
-                        }
-                        .frame(width: 350,
-                               height: 70,
-                               alignment: .leading)
-                        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
-                                                   startPoint: .leading,
-                                                   endPoint: .trailing))
-                        .cornerRadius(50)
-                        .padding(4)
-                        HStack{
-                            Text("Day 2")
-                                .padding()
-                        }
-                        .frame(width: 350,
-                               height: 70,
-                               alignment: .leading)
-                        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
-                                                   startPoint: .leading,
-                                                   endPoint: .trailing))
-                        .cornerRadius(50)
-                        .padding(4)
-                        HStack{
-                            Text("Day 3")
-                                .padding()
-                        }
-                        .frame(width: 350,
-                               height: 70,
-                               alignment: .leading)
-                        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
-                                                   startPoint: .leading,
-                                                   endPoint: .trailing))
-                        .cornerRadius(50)
-                        .padding(4)
-                        HStack{
-                            Text("Day 4")
-                                .padding()
-                        }
-                        .frame(width: 350,
-                               height: 70,
-                               alignment: .leading)
-                        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
-                                                   startPoint: .leading,
-                                                   endPoint: .trailing))
-                        .cornerRadius(50)
-                        .padding(4)
+                        BorderedTextView(informativeText: "Day 1: ")
                         
-                        HStack{
-                            Text("Day 5")
-                                .padding()
-                        }
-                        .frame(width: 350,
-                               height: 70,
-                               alignment: .leading)
-                        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
-                                                   startPoint: .leading,
-                                                   endPoint: .trailing))
-                        .cornerRadius(50)
-                        .padding(4)
+                        BorderedTextView(informativeText: "Day 2: ")
                         
-                        Spacer()
+                        BorderedTextView(informativeText: "Day 3: ")
+                                                
+                        BorderedTextView(informativeText: "Day 4: ")
+                        
+                        BorderedTextView(informativeText: "Day 5: ")
                     }
                     Spacer()
                     
@@ -290,30 +154,31 @@ struct ContentView: View {
                 HStack{
                     TabBarIcon(viewRouter: viewRouter,
                                assignedPage: .mealEntry,
+                               padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
                                systemIconName: "leaf",
                                tabName: "Meals")
                     TabBarIcon(viewRouter: viewRouter,
-                               assignedPage: .weightEntry,
+                               assignedPage: .weightEntry, padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
                                systemIconName: "gauge",
                                tabName: "Weight")
                     TabBarIcon(viewRouter: viewRouter,
-                               assignedPage: .home,
+                               assignedPage: .home, padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
                                systemIconName: "house",
                                tabName: "Home")
                     TabBarIcon(viewRouter: viewRouter,
-                               assignedPage: .search,
+                               assignedPage: .search, padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
                                systemIconName: "magnifyingglass",
                                tabName: "Search")
                     TabBarIcon(viewRouter: viewRouter,
-                               assignedPage: .account,
+                               assignedPage: .account, padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
                                systemIconName: "person.crop.circle",
@@ -335,7 +200,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView(viewRouter: ViewRouter())
-            ContentView(viewRouter: ViewRouter())
         }
     }
 }
@@ -344,6 +208,7 @@ struct TabBarIcon: View {
     
     @StateObject var viewRouter: ViewRouter
     let assignedPage: Page
+    let padding: Edge.Set
     
     let width, height: CGFloat
     let systemIconName, tabName: String
@@ -354,7 +219,7 @@ struct TabBarIcon: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: width, height: height)
-                .padding(.top, 10)
+                .padding(padding, 10)
             Text(tabName)
                 .font(.footnote)
             Spacer()
@@ -413,3 +278,80 @@ struct NotificationNumLabel : View {
     }
 }
  */
+
+struct BorderedTextView: View {
+    
+    let informativeText: String
+    
+    var body: some View {
+        HStack{
+            Text(informativeText)
+                .padding()
+        }
+        .frame(width: 350,
+               height: 70,
+               alignment: .leading)
+        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
+                                   startPoint: .leading,
+                                   endPoint: .trailing))
+        .cornerRadius(50)
+    }
+}
+
+struct UserEnterView: View {
+    
+    let text: String
+    let textFieldText: String
+    @Binding var enteredValue: String
+    
+    
+    var body: some View {
+        HStack{
+            Text(text)
+            Spacer()
+            TextField(textFieldText, text: $enteredValue)
+                .modifier(TextFieldClearButton(text: $enteredValue))
+                .frame(width: 175, height: 25, alignment: .trailing)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.trailing, 4)
+            
+            //store carbs into database
+        }
+    }
+}
+
+struct PageLabelView: View {
+    
+    let pageTitle: String
+    
+    var body: some View {
+        Text(pageTitle)
+            .bold()
+            .font(Font.system(size: 35))
+            .padding(8)
+            .overlay(RoundedRectangle(cornerRadius: 30)
+                        .stroke(Color("Mint"), lineWidth: 5))
+    }
+}
+
+struct TopBarIcon: View {
+    
+    @StateObject var viewRouter: ViewRouter
+    let assignedPage: Page
+    let edge: Edge.Set
+    
+    let systemIconName: String
+    
+    var body: some View {
+        Image(systemName: systemIconName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 16, height: 16)
+            .padding(.top, 40)
+            .padding(edge, 10)
+            //.overlay(NotificationNumLabel(number: $labelNumber))
+            .onTapGesture{
+                viewRouter.currentPage = assignedPage
+            }
+    }
+}
