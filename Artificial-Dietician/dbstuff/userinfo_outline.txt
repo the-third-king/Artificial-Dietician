@@ -1,0 +1,8 @@
+{
+    "username": "",
+    "f_name": "",
+    "l_name": "",
+    "sex": "",
+    "age": "",
+    "height": ""
+}
