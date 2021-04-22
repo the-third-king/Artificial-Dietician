@@ -23,7 +23,7 @@ struct ContentView: View {
         GeometryReader { geometry in
             VStack{
                 HStack{
-                    TopBarIcon(viewRouter: viewRouter,
+                    TopBarIconView(viewRouter: viewRouter,
                                assignedPage: .notification,
                                edge: .leading,
                                systemIconName: "bell")
@@ -33,7 +33,7 @@ struct ContentView: View {
                         .padding(.top, 40)
                         .font(Font.system(size: 25))
                     Spacer()
-                    TopBarIcon(viewRouter: viewRouter,
+                    TopBarIconView(viewRouter: viewRouter,
                                assignedPage: .account,
                                edge: .trailing,
                                systemIconName: "person.crop.circle")
@@ -68,21 +68,25 @@ struct ContentView: View {
                     VStack{
                         PageLabelView(pageTitle: "Meal Entry")
                         
-                        UserEnterView(text: "Meal Type",
+                        UserEnteryView(text: "Meal Type",
                                       textFieldText: "Meal Type",
-                                      enteredValue: $mealName)
+                                      enteredValue: $mealName,
+                                      numPad: false)
                         
-                        UserEnterView(text: "Amount of Calories",
+                        UserEnteryView(text: "Amount of Calories",
                                      textFieldText: "Calories",
-                                     enteredValue: $calories)
+                                     enteredValue: $calories,
+                                     numPad: true)
                         
-                        UserEnterView(text: "Amount of Protien: ",
+                        UserEnteryView(text: "Amount of Protien: ",
                                       textFieldText: "Protien",
-                                      enteredValue: $protien)
+                                      enteredValue: $protien,
+                                      numPad: true)
                         
-                        UserEnterView(text: "Amount of Carbohydrates: ",
+                        UserEnteryView(text: "Amount of Carbohydrates: ",
                                       textFieldText: "Carbohydrates",
-                                      enteredValue: $carbs)
+                                      enteredValue: $carbs,
+                                      numPad: true)
                         
                         Button{
                             print("Information entered")
@@ -114,9 +118,10 @@ struct ContentView: View {
                     VStack{
                         PageLabelView(pageTitle: "Weight")
                         
-                        UserEnterView(text: "New Weight:",
+                        UserEnteryView(text: "New Weight:",
                                       textFieldText: "Weight",
-                                      enteredValue: $weight)
+                                      enteredValue: $weight,
+                                      numPad: true)
                         Button{
                             //TODO: put the wieght into the database
                             print("weight entered")
@@ -152,32 +157,32 @@ struct ContentView: View {
                 
                 Spacer()
                 HStack{
-                    TabBarIcon(viewRouter: viewRouter,
+                    TabBarIconView(viewRouter: viewRouter,
                                assignedPage: .mealEntry,
                                padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
                                systemIconName: "leaf",
                                tabName: "Meals")
-                    TabBarIcon(viewRouter: viewRouter,
+                    TabBarIconView(viewRouter: viewRouter,
                                assignedPage: .weightEntry, padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
                                systemIconName: "gauge",
                                tabName: "Weight")
-                    TabBarIcon(viewRouter: viewRouter,
+                    TabBarIconView(viewRouter: viewRouter,
                                assignedPage: .home, padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
                                systemIconName: "house",
                                tabName: "Home")
-                    TabBarIcon(viewRouter: viewRouter,
+                    TabBarIconView(viewRouter: viewRouter,
                                assignedPage: .search, padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
                                systemIconName: "magnifyingglass",
                                tabName: "Search")
-                    TabBarIcon(viewRouter: viewRouter,
+                    TabBarIconView(viewRouter: viewRouter,
                                assignedPage: .account, padding: .top,
                                width: geometry.size.width/5,
                                height: geometry.size.height/29,
@@ -203,155 +208,4 @@ struct ContentView_Previews: PreviewProvider {
         }
     }
 }
-
-struct TabBarIcon: View {
-    
-    @StateObject var viewRouter: ViewRouter
-    let assignedPage: Page
-    let padding: Edge.Set
-    
-    let width, height: CGFloat
-    let systemIconName, tabName: String
-    
-    var body: some View {
-        VStack{
-            Image(systemName: systemIconName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: width, height: height)
-                .padding(padding, 10)
-            Text(tabName)
-                .font(.footnote)
-            Spacer()
-        }
-        .padding(.horizontal, -4)
-        .onTapGesture{
-            viewRouter.currentPage = assignedPage
-        }
-        .foregroundColor(viewRouter.currentPage == assignedPage ? Color("TabBarHighlight") : .gray)
-    }
-}
-
-struct TextFieldClearButton: ViewModifier{
-    
-    @Binding var text: String
-    
-    func body(content: Content) -> some View{
-        
-        HStack{
-            content
-            if !text.isEmpty{
-                Button{
-                    self.text = ""
-                }label:{
-                    Image(systemName: "delete.left")
-                        .foregroundColor(Color(UIColor.opaqueSeparator))
-                }
-            }
-        }
-    }
-}
-
-/*
-struct NotificationNumLabel : View {
-    
-    @Binding var number: Int
-    
-    var body: some View {
-        ZStack{
-            Capsule()
-                .fill(Color.red)
-                .frame(width: 20 * CGFloat(numOfDigits()),
-                       height: 45,
-                       alignment: .topTrailing)
-                .position(CGPoint(x: 150, y: 0))
-            
-            Text("\(number)")
-                .foregroundColor(Color.white)
-                .font(Font.system(size: 35).bold()).position(CGPoint(x: 150, y: 0))
-        }
-    }
-    
-    func numOfDigits() -> Float {
-        let numofDigits = Float(String(number).count)
-        return numOfDigits == 1 ? 1.5 : numOfDigits()
-    }
-}
- */
-
-struct BorderedTextView: View {
-    
-    let informativeText: String
-    
-    var body: some View {
-        HStack{
-            Text(informativeText)
-                .padding()
-        }
-        .frame(width: 350,
-               height: 70,
-               alignment: .leading)
-        .background(LinearGradient(gradient: Gradient(colors: [.gray, Color("Mint")]),
-                                   startPoint: .leading,
-                                   endPoint: .trailing))
-        .cornerRadius(50)
-    }
-}
-
-struct UserEnterView: View {
-    
-    let text: String
-    let textFieldText: String
-    @Binding var enteredValue: String
-    
-    
-    var body: some View {
-        HStack{
-            Text(text)
-            Spacer()
-            TextField(textFieldText, text: $enteredValue)
-                .modifier(TextFieldClearButton(text: $enteredValue))
-                .frame(width: 175, height: 25, alignment: .trailing)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.trailing, 4)
-            
-            //store carbs into database
-        }
-    }
-}
-
-struct PageLabelView: View {
-    
-    let pageTitle: String
-    
-    var body: some View {
-        Text(pageTitle)
-            .bold()
-            .font(Font.system(size: 35))
-            .padding(8)
-            .overlay(RoundedRectangle(cornerRadius: 30)
-                        .stroke(Color("Mint"), lineWidth: 5))
-    }
-}
-
-struct TopBarIcon: View {
-    
-    @StateObject var viewRouter: ViewRouter
-    let assignedPage: Page
-    let edge: Edge.Set
-    
-    let systemIconName: String
-    
-    var body: some View {
-        Image(systemName: systemIconName)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 16, height: 16)
-            .padding(.top, 40)
-            .padding(edge, 10)
-            //.overlay(NotificationNumLabel(number: $labelNumber))
-            .onTapGesture{
-                viewRouter.currentPage = assignedPage
-            }
-    }
-}
+v
