@@ -2,34 +2,56 @@
 //  UIViewAlert.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 4/13/21.
+//  Created by Cameron Triplett on 4/13/21.
 //
 
 import UIKit
-import SwiftUI
+import MongoSwift
+import StitchCore
+import StitchRemoteMongoDBService
 
 class ViewController: UIViewController{
-    override func viewDidAppear(_ animated: Bool){
-        super.viewDidAppear(animated)
+    override func viewDidLoad(){
+        /*
+         let client = try! Stitch.initializeDefaultAppClienwithClientAppIDID: "artificial-dietician-dltly")
         
-        displayAlert()
-    }
-    
-    func displayAlert(){
-        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to add this?", preferredStyle: .alert)
+        let mongoClient = client.serviceClient(
+            fromFactory: remoteMongoClientFactory,
+            withName: "mongodb-atlas"
+        )
         
-        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-            print("OK button tapped")
-        })
+        let coll = mongoClient.db("<DATABASE>").collection("<COLLECTION>")
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-            print("Cancel button tapped")
+        client.auth.login(withCredential: AnonymousCredential()) { result in
+            switch result {
+            case .success(let user):
+                coll.updateOne(
+                    filter: ["owner_id": user.id],
+                    update: ["number": 42, "owner_id": user.id],
+                    options: RemoteUpdateOptions(upsert: true)
+                ) { reuslt in
+                    switch result {
+                    case.success:
+                        coll.find().asArray({ result in
+                            switch result {
+                            case .success(let result):
+                                print("Found documents:")
+                                
+                                result.forEach( {document in
+                                    print(document.canonicalExtendedJSON)
+                                })
+                            case .failure(let error):
+                                print("Error in finding documents: \(error)")
+                            }
+                        })
+                    case .failure(let error):
+                        print("Error updating or inserting a document: \(error)")
+                    }
+                }
+            case .failure(let error):
+                print("Error in login: \(error)")
+            }
         }
-        
-        dialogMessage.addAction(ok)
-        dialogMessage.addAction(cancel)
-        
-        self.present(dialogMessage, animated: true, completion: nil)
-        
+ */
     }
 }

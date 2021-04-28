@@ -20,9 +20,22 @@
 		C49DE92126251848002FC058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49DE92026251848002FC058 /* Assets.xcassets */; };
 		C49DE92426251848002FC058 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49DE92326251848002FC058 /* Preview Assets.xcassets */; };
 		C49DE92D262525C8002FC058 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DE92C262525C8002FC058 /* ViewRouter.swift */; };
+		C4B3350C2637ADE100C55CAA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B3350B2637ADE100C55CAA /* Profile.swift */; };
+		C4B335102637AEB700C55CAA /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B3350F2637AEB700C55CAA /* ProfileEditor.swift */; };
+		C4B35C962638F6AD00DFF783 /* WeightEntryHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B35C952638F6AD00DFF783 /* WeightEntryHost.swift */; };
+		C4B35C9A2638F8B400DFF783 /* BottomBarHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B35C992638F8B400DFF783 /* BottomBarHost.swift */; };
+		C4C4B2442638CFF80026EBB1 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B2432638CFF80026EBB1 /* ProfileHost.swift */; };
+		C4C4B2472638D0980026EBB1 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B2462638D0980026EBB1 /* ProfileSummary.swift */; };
+		C4C4B24B2638D7B50026EBB1 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B24A2638D7B50026EBB1 /* ModelData.swift */; };
+		C4C4B24F2638DD1D0026EBB1 /* ProfileEditingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B24E2638DD1D0026EBB1 /* ProfileEditingBar.swift */; };
+		C4C4B2552638EEDD0026EBB1 /* TopBarHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B2542638EEDD0026EBB1 /* TopBarHost.swift */; };
+		C4F2584F26324EE30015F32A /* NutritionIXLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2584E26324EE30015F32A /* NutritionIXLinker.swift */; };
+		DA2A2B62ABF77B0C1627913B /* Pods_Artificial_Dietician.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80AFEF4BA7C79F53D703EE4 /* Pods_Artificial_Dietician.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D24785322E6076B57B80B79 /* Pods-Artificial-Dietician.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artificial-Dietician.release.xcconfig"; path = "Target Support Files/Pods-Artificial-Dietician/Pods-Artificial-Dietician.release.xcconfig"; sourceTree = "<group>"; };
+		6B2BD2B43CEEF3BE201D7200 /* Pods-Artificial-Dietician.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artificial-Dietician.debug.xcconfig"; path = "Target Support Files/Pods-Artificial-Dietician/Pods-Artificial-Dietician.debug.xcconfig"; sourceTree = "<group>"; };
 		C4259D5726268479004C4238 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C48402952630EB40007F439A /* PageLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLabelView.swift; sourceTree = "<group>"; };
 		C48402992630ED20007F439A /* TopBarIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarIconView.swift; sourceTree = "<group>"; };
@@ -38,6 +51,17 @@
 		C49DE92326251848002FC058 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C49DE92526251848002FC058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C49DE92C262525C8002FC058 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		C4B3350B2637ADE100C55CAA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		C4B3350F2637AEB700C55CAA /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
+		C4B35C952638F6AD00DFF783 /* WeightEntryHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightEntryHost.swift; sourceTree = "<group>"; };
+		C4B35C992638F8B400DFF783 /* BottomBarHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarHost.swift; sourceTree = "<group>"; };
+		C4C4B2432638CFF80026EBB1 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
+		C4C4B2462638D0980026EBB1 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
+		C4C4B24A2638D7B50026EBB1 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		C4C4B24E2638DD1D0026EBB1 /* ProfileEditingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditingBar.swift; sourceTree = "<group>"; };
+		C4C4B2542638EEDD0026EBB1 /* TopBarHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarHost.swift; sourceTree = "<group>"; };
+		C4F2584E26324EE30015F32A /* NutritionIXLinker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionIXLinker.swift; sourceTree = "<group>"; };
+		D80AFEF4BA7C79F53D703EE4 /* Pods_Artificial_Dietician.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artificial_Dietician.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +69,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2A2B62ABF77B0C1627913B /* Pods_Artificial_Dietician.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		281E58586CCD404B18A02A81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B2BD2B43CEEF3BE201D7200 /* Pods-Artificial-Dietician.debug.xcconfig */,
+				1D24785322E6076B57B80B79 /* Pods-Artificial-Dietician.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A5D9B6F075993F5B4B8F4FC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D80AFEF4BA7C79F53D703EE4 /* Pods_Artificial_Dietician.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C49DE91026251848002FC058 = {
 			isa = PBXGroup;
 			children = (
 				C49DE91B26251848002FC058 /* Artificial-Dietician */,
 				C49DE91A26251848002FC058 /* Products */,
+				281E58586CCD404B18A02A81 /* Pods */,
+				A5D9B6F075993F5B4B8F4FC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,16 +116,12 @@
 			isa = PBXGroup;
 			children = (
 				C49DE91C26251848002FC058 /* Artificial_DieticianApp.swift */,
-				C49DE91E26251848002FC058 /* ContentView.swift */,
-				C48402952630EB40007F439A /* PageLabelView.swift */,
-				C48402992630ED20007F439A /* TopBarIconView.swift */,
-				C484029D2630F48C007F439A /* UserEnteryView.swift */,
-				C48402A32630F760007F439A /* BorderedTextView.swift */,
-				C48402AB2630F8FF007F439A /* TabBarIconView.swift */,
-				C48402B22630FAE6007F439A /* NotificationNumLabelView.swift */,
+				C4F25848263227CB0015F32A /* Views */,
 				C48402A72630F83C007F439A /* TextFieldClearButton.swift */,
 				C49DE92C262525C8002FC058 /* ViewRouter.swift */,
+				C4C4B2492638D7680026EBB1 /* Model */,
 				C4259D5726268479004C4238 /* ViewController.swift */,
+				C4F2584E26324EE30015F32A /* NutritionIXLinker.swift */,
 				C49DE92026251848002FC058 /* Assets.xcassets */,
 				C49DE92526251848002FC058 /* Info.plist */,
 				C49DE92226251848002FC058 /* Preview Content */,
@@ -96,6 +137,76 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C4B3350A2637AD6500C55CAA /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C4C4B2432638CFF80026EBB1 /* ProfileHost.swift */,
+				C4B3350B2637ADE100C55CAA /* Profile.swift */,
+				C4C4B2462638D0980026EBB1 /* ProfileSummary.swift */,
+				C4B3350F2637AEB700C55CAA /* ProfileEditor.swift */,
+				C4C4B24E2638DD1D0026EBB1 /* ProfileEditingBar.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		C4B35C942638F67900DFF783 /* WeightEntry */ = {
+			isa = PBXGroup;
+			children = (
+				C4B35C952638F6AD00DFF783 /* WeightEntryHost.swift */,
+			);
+			path = WeightEntry;
+			sourceTree = "<group>";
+		};
+		C4B35C982638F88800DFF783 /* BottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				C4B35C992638F8B400DFF783 /* BottomBarHost.swift */,
+				C48402AB2630F8FF007F439A /* TabBarIconView.swift */,
+			);
+			path = BottomBar;
+			sourceTree = "<group>";
+		};
+		C4B35C9E2638FAA600DFF783 /* SharedPageViews */ = {
+			isa = PBXGroup;
+			children = (
+				C48402952630EB40007F439A /* PageLabelView.swift */,
+				C484029D2630F48C007F439A /* UserEnteryView.swift */,
+				C48402A32630F760007F439A /* BorderedTextView.swift */,
+			);
+			path = SharedPageViews;
+			sourceTree = "<group>";
+		};
+		C4C4B2492638D7680026EBB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4C4B24A2638D7B50026EBB1 /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4C4B2532638EEB90026EBB1 /* TopBar */ = {
+			isa = PBXGroup;
+			children = (
+				C4C4B2542638EEDD0026EBB1 /* TopBarHost.swift */,
+				C48402992630ED20007F439A /* TopBarIconView.swift */,
+			);
+			path = TopBar;
+			sourceTree = "<group>";
+		};
+		C4F25848263227CB0015F32A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C49DE91E26251848002FC058 /* ContentView.swift */,
+				C4B35C982638F88800DFF783 /* BottomBar */,
+				C4C4B2532638EEB90026EBB1 /* TopBar */,
+				C4B35C942638F67900DFF783 /* WeightEntry */,
+				C4B3350A2637AD6500C55CAA /* Account */,
+				C4B35C9E2638FAA600DFF783 /* SharedPageViews */,
+				C48402B22630FAE6007F439A /* NotificationNumLabelView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C49DE92826251848002FC058 /* Build configuration list for PBXNativeTarget "Artificial-Dietician" */;
 			buildPhases = (
+				D9882C7DB71346F1266629FD /* [CP] Check Pods Manifest.lock */,
 				C49DE91526251848002FC058 /* Sources */,
 				C49DE91626251848002FC058 /* Frameworks */,
 				C49DE91726251848002FC058 /* Resources */,
+				AEA01A1BD3E93B0420F31D29 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,21 +273,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AEA01A1BD3E93B0420F31D29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artificial-Dietician/Pods-Artificial-Dietician-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artificial-Dietician/Pods-Artificial-Dietician-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Artificial-Dietician/Pods-Artificial-Dietician-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9882C7DB71346F1266629FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Artificial-Dietician-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C49DE91526251848002FC058 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C4B24B2638D7B50026EBB1 /* ModelData.swift in Sources */,
 				C48402A42630F760007F439A /* BorderedTextView.swift in Sources */,
 				C48402962630EB40007F439A /* PageLabelView.swift in Sources */,
 				C484029E2630F48C007F439A /* UserEnteryView.swift in Sources */,
+				C4C4B24F2638DD1D0026EBB1 /* ProfileEditingBar.swift in Sources */,
+				C4B35C9A2638F8B400DFF783 /* BottomBarHost.swift in Sources */,
+				C4C4B2442638CFF80026EBB1 /* ProfileHost.swift in Sources */,
+				C4B3350C2637ADE100C55CAA /* Profile.swift in Sources */,
+				C4B335102637AEB700C55CAA /* ProfileEditor.swift in Sources */,
 				C484029A2630ED20007F439A /* TopBarIconView.swift in Sources */,
 				C48402A82630F83C007F439A /* TextFieldClearButton.swift in Sources */,
 				C48402AC2630F8FF007F439A /* TabBarIconView.swift in Sources */,
 				C49DE92D262525C8002FC058 /* ViewRouter.swift in Sources */,
 				C4259D5826268479004C4238 /* ViewController.swift in Sources */,
+				C4F2584F26324EE30015F32A /* NutritionIXLinker.swift in Sources */,
 				C49DE91F26251848002FC058 /* ContentView.swift in Sources */,
+				C4C4B2552638EEDD0026EBB1 /* TopBarHost.swift in Sources */,
+				C4B35C962638F6AD00DFF783 /* WeightEntryHost.swift in Sources */,
 				C49DE91D26251848002FC058 /* Artificial_DieticianApp.swift in Sources */,
+				C4C4B2472638D0980026EBB1 /* ProfileSummary.swift in Sources */,
 				C48402B32630FAE6007F439A /* NotificationNumLabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +465,7 @@
 		};
 		C49DE92926251848002FC058 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B2BD2B43CEEF3BE201D7200 /* Pods-Artificial-Dietician.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,6 +487,7 @@
 		};
 		C49DE92A26251848002FC058 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D24785322E6076B57B80B79 /* Pods-Artificial-Dietician.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

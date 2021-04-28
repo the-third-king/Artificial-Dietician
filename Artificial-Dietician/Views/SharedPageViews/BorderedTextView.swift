@@ -2,7 +2,8 @@
 //  BorderedTextView.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 4/21/21.
+//  View for the bordered text fields
+//  Created by Cameron Triplett on 4/21/21.
 //
 
 import SwiftUI

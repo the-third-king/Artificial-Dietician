@@ -2,7 +2,8 @@
 //  ViewRouter.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 4/12/21.
+//  The router for what page the user is on depending on what tab icon is clicked on
+//  Created by Cameron Triplett on 4/12/21.
 //
 
 import SwiftUI
@@ -19,4 +20,5 @@ enum Page{
     case search
     case account
     case notification
+    case logOut
 }
