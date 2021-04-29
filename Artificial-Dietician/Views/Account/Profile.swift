@@ -13,17 +13,17 @@ import SwiftUI
 struct Profile: Hashable, Codable{
     
     var username: String
-    var password = "testPass"
-    var f_name = "Test"
-    var l_name = "User"
-    var sex = "M"
-    var age = "20"
-    var height = "72"
-    var weight = "213"
-    var daysInARow = "10"
+    var password = ""
+    var f_name = ""
+    var l_name = ""
+    var sex = ""
+    var age = ""
+    var height = ""
+    var weight = ""
+    var daysInARow = ""
     var prefersNotifications = true
     
-    var dislikedFoods = ["Chicken", "Broccoli"]
+    var dislikedFoods = ["", ""]
     
    
     static let `default` = Profile(username: "Username")

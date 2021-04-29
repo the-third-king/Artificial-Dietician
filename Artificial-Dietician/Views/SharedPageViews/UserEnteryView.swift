@@ -25,7 +25,7 @@ struct UserEnteryView: View {
                     .modifier(TextFieldClearButton(text: $enteredValue))
                     .frame(width: 175, height: 25, alignment: .trailing)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
+                    .keyboardType(.decimalPad)
                     .padding(.trailing, 4)
             }else{
                 Text(text)

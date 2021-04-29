@@ -10,6 +10,7 @@ import SwiftUI
 
 struct WeightEntryHost: View {
     
+    @EnvironmentObject var modelData: ModelData
     @State private var weight: String  = ""
     
     var body: some View {
@@ -21,9 +22,10 @@ struct WeightEntryHost: View {
                            enteredValue: $weight,
                            numPad: true)
             Button{
-                //TODO: put the wieght into the database
-                print("weight entered")
-                printThings()
+                modelData.profile.weight = weight
+                //Dismiss the keyboard
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                weight = ""
             }label: {
                 Text("Confirm Weight")
             }
@@ -49,5 +51,6 @@ struct WeightEntryHost: View {
 struct WeightEntryHost_Previews: PreviewProvider {
     static var previews: some View {
         WeightEntryHost()
+            .environmentObject(ModelData())
     }
 }
