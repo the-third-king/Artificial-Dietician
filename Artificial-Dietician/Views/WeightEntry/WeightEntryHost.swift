@@ -22,7 +22,12 @@ struct WeightEntryHost: View {
                            enteredValue: $weight,
                            numPad: true)
             Button{
+                //update the profile
                 modelData.profile.weight = weight
+                for i in 0..<(modelData.profile.previousWeights.count-1){
+                    modelData.profile.previousWeights[i + 1] = modelData.profile.previousWeights[i]
+                }
+                modelData.profile.previousWeights[0] = weight
                 //Dismiss the keyboard
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 weight = ""
@@ -32,19 +37,8 @@ struct WeightEntryHost: View {
         }
         Divider().frame(height: 5).background(Color("Mint"))
         
-        ScrollView{
-            Text("Previous Weights")
-                .font(Font.system(size: 30))
-            BorderedTextView(informativeText: "Day 1: ")
-            
-            BorderedTextView(informativeText: "Day 2: ")
-            
-            BorderedTextView(informativeText: "Day 3: ")
-            
-            BorderedTextView(informativeText: "Day 4: ")
-            
-            BorderedTextView(informativeText: "Day 5: ")
-        }
+        PreviousWeights()
+            .environmentObject(ModelData())
     }
 }
 

@@ -31,6 +31,7 @@
 		C4C4B24F2638DD1D0026EBB1 /* ProfileEditingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B24E2638DD1D0026EBB1 /* ProfileEditingBar.swift */; };
 		C4C4B2552638EEDD0026EBB1 /* TopBarHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B2542638EEDD0026EBB1 /* TopBarHost.swift */; };
 		C4D5B438263A41200031EAEB /* HomeHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D5B437263A41200031EAEB /* HomeHost.swift */; };
+		C4E69423263B3D69001B0B49 /* PreviousWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E69422263B3D69001B0B49 /* PreviousWeights.swift */; };
 		C4F2584F26324EE30015F32A /* NutritionIXLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2584E26324EE30015F32A /* NutritionIXLinker.swift */; };
 		DA2A2B62ABF77B0C1627913B /* Pods_Artificial_Dietician.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80AFEF4BA7C79F53D703EE4 /* Pods_Artificial_Dietician.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		C4C4B24E2638DD1D0026EBB1 /* ProfileEditingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditingBar.swift; sourceTree = "<group>"; };
 		C4C4B2542638EEDD0026EBB1 /* TopBarHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarHost.swift; sourceTree = "<group>"; };
 		C4D5B437263A41200031EAEB /* HomeHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHost.swift; sourceTree = "<group>"; };
+		C4E69422263B3D69001B0B49 /* PreviousWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousWeights.swift; sourceTree = "<group>"; };
 		C4F2584E26324EE30015F32A /* NutritionIXLinker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionIXLinker.swift; sourceTree = "<group>"; };
 		D80AFEF4BA7C79F53D703EE4 /* Pods_Artificial_Dietician.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artificial_Dietician.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				C4B35C952638F6AD00DFF783 /* WeightEntryHost.swift */,
+				C4E69422263B3D69001B0B49 /* PreviousWeights.swift */,
 			);
 			path = WeightEntry;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				C4C4B2552638EEDD0026EBB1 /* TopBarHost.swift in Sources */,
 				C4B35C962638F6AD00DFF783 /* WeightEntryHost.swift in Sources */,
 				C4D5B438263A41200031EAEB /* HomeHost.swift in Sources */,
+				C4E69423263B3D69001B0B49 /* PreviousWeights.swift in Sources */,
 				C49DE91D26251848002FC058 /* Artificial_DieticianApp.swift in Sources */,
 				C4C4B2472638D0980026EBB1 /* ProfileSummary.swift in Sources */,
 				C48402B32630FAE6007F439A /* NotificationNumLabelView.swift in Sources */,

@@ -14,8 +14,10 @@ struct BorderedTextView: View {
     
     var body: some View {
         HStack{
+            Spacer()
             Text(informativeText)
                 .padding()
+            Spacer()
         }
         .frame(width: 350,
                height: 70,
@@ -30,6 +32,6 @@ struct BorderedTextView: View {
 
 struct BorderedTextView_Previews: PreviewProvider {
     static var previews: some View {
-        BorderedTextView(informativeText: "")
+        BorderedTextView(informativeText: "Informative text")
     }
 }

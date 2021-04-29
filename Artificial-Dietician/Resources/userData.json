@@ -10,8 +10,8 @@
         "weight": "213",
 		"daysInARow": "10",
 		"prefersNotifications": true,
-		"dislikedFoods": ["fish", "broccoli"]
-		
+		"dislikedFoods": ["fish", "broccoli"],
+        "previousWeights": ["213", "220", "225", "230", "235", "240", "245", "250", "255", "260", "265", "270", "275"]
 	},
 	{
 		"username": "theGoat",
@@ -24,7 +24,8 @@
         "weight": "245",
 		"daysInARow": "59",
 		"prefersNotifications": true,
-		"dislikedFoods": []
+		"dislikedFoods": [],
+        "previousWeights": ["245", "244", "246", "250", "247", "245", "243", "243", "240", "239", "240", "243", "243"]
 	},
 	{
 		"username": "newbie",
@@ -37,6 +38,7 @@
         "weight": "145",
 		"daysInARow": "0",
 		"prefersNotifications": false,
-		"dislikedFoods": ["chicken", "broccoli", "apples"]
+		"dislikedFoods": ["chicken", "broccoli", "apple"],
+        "previousWeights": ["245", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a"]
 	}
 ]
