@@ -1,0 +1,42 @@
+[
+	{
+		"username": "testUser",
+		"password": "testPass",
+		"f_name": "Test",
+		"l_name": "User",
+		"sex": "M",
+		"age": "20",
+		"height": "72",
+        "weight": "213",
+		"daysInARow": "10",
+		"prefersNotifications": true,
+		"dislikedFoods": ["fish", "broccoli"]
+		
+	},
+	{
+		"username": "theGoat",
+		"password": "Goat",
+		"f_name": "Michael",
+		"l_name": "Jordan",
+		"sex": "M",
+		"age": "40",
+		"height": "80",
+        "weight": "245",
+		"daysInARow": "59",
+		"prefersNotifications": true,
+		"dislikedFoods": []
+	},
+	{
+		"username": "newbie",
+		"password": "Password",
+		"f_name": "New",
+		"l_name": "Person",
+		"sex": "F",
+		"age": "14",
+		"height": "56",
+        "weight": "145",
+		"daysInARow": "0",
+		"prefersNotifications": false,
+		"dislikedFoods": ["chicken", "broccoli", "apples"]
+	}
+]

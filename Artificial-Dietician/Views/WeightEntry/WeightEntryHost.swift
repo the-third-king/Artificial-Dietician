@@ -23,6 +23,7 @@ struct WeightEntryHost: View {
             Button{
                 //TODO: put the wieght into the database
                 print("weight entered")
+                printThings()
             }label: {
                 Text("Confirm Weight")
             }

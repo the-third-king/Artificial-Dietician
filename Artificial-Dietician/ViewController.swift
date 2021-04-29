@@ -13,7 +13,7 @@ import StitchRemoteMongoDBService
 class ViewController: UIViewController{
     override func viewDidLoad(){
         /*
-         let client = try! Stitch.initializeDefaultAppClienwithClientAppIDID: "artificial-dietician-dltly")
+        let client = try! Stitch.initializeDefaultAppClientwithClientAppID: "artificial-dietician-dltly")
         
         let mongoClient = client.serviceClient(
             fromFactory: remoteMongoClientFactory,

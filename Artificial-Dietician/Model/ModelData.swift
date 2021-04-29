@@ -11,9 +11,12 @@ import Combine
 
 final class ModelData: ObservableObject{
     
-    @Published var profile = Profile.default
+    @Published var profile = profiles[0]
+    
     
 }
+
+var profiles: [Profile] = load("userData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

@@ -17,7 +17,6 @@ enum Page{
     case home
     case mealEntry
     case weightEntry
-    case search
     case account
     case notification
     case logOut

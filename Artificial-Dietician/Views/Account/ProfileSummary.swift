@@ -11,21 +11,21 @@ import SwiftUI
 struct ProfileSummary: View {
     
     @EnvironmentObject var modelData: ModelData
-    var profile: Profile
+    //var profile: Profile
     
     var body: some View {
         ScrollView{
             VStack(alignment: .leading, spacing: 10){
-                Text("\(profile.f_name) \(profile.l_name)")
+                Text("\(modelData.profile.f_name) \(modelData.profile.l_name)")
                     .bold()
                     .font(.title)
                 
-                Text("Notifications: \(profile.prefersNotifications ? "On": "Off" )")
-                Text("Username: \(profile.username)")
+                Text("Notifications: \(modelData.profile.prefersNotifications ? "On": "Off" )")
+                Text("Username: \(modelData.profile.username)")
                 Text("Password: ********")
-                Text("Sex: \(profile.sex)")
-                Text("Age: \(profile.age)")
-                Text("Height: \(profile.height)")
+                Text("Sex: \(modelData.profile.sex)")
+                Text("Age (Years): \(modelData.profile.age)")
+                Text("Height (Inches): \(modelData.profile.height)")
             }
         }
     }
@@ -33,7 +33,7 @@ struct ProfileSummary: View {
 
 struct ProfileSummary_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileSummary(profile: Profile.default)
+        ProfileSummary()
             .environmentObject(ModelData())
     }
 }

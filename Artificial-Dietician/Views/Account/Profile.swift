@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct Profile{
+
+struct Profile: Hashable, Codable{
+    
     var username: String
     var password = "testPass"
     var f_name = "Test"
@@ -16,10 +19,14 @@ struct Profile{
     var sex = "M"
     var age = "20"
     var height = "72"
+    var weight = "213"
+    var daysInARow = "10"
     var prefersNotifications = true
+    
+    var dislikedFoods = ["Chicken", "Broccoli"]
+    
    
-    
-    static let `default` = Profile(username: "testUser")
-    
+    static let `default` = Profile(username: "Username")
+ 
     
 }
