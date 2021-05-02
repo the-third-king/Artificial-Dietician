@@ -16,11 +16,13 @@ struct HomeHost: View {
         VStack{
             PageLabelView(pageTitle: "Home")
             
-            BorderedTextView(informativeText: "Calories Eaten Today:")
+            BorderedTextView(informativeText: "Calories Eaten Today: \(Int(FindCalories(modelData: modelData)) - Int(CaloriesLeft(modelData: modelData))) KCal")
             
-            BorderedTextView(informativeText: "Amount of Protien: ")
+            BorderedTextView(informativeText: "Amount of Protien: \(DailyProtein(modelData: modelData)) g")
             
-            BorderedTextView(informativeText: "Amount of Carbohydrates: ")
+            BorderedTextView(informativeText: "Amount of Carbohydrates: \(DailyCarbohydrates(modelData: modelData)) g")
+            
+            BorderedTextView(informativeText: "Amount of Fats: \(DailyFats(modelData: modelData)) g")
             
             BorderedTextView(informativeText: "Today's Weight: \(modelData.profile.weight) lbs")
             

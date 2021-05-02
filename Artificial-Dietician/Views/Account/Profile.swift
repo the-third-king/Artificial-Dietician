@@ -16,7 +16,6 @@ struct Profile: Hashable, Codable{
     var password = ""
     var f_name = ""
     var l_name = ""
-    var id = ""
     var sex = ""
     var age = ""
     var height = ""
@@ -24,9 +23,14 @@ struct Profile: Hashable, Codable{
     var daysInARow = ""
     var prefersNotifications = true
     
-    var dislikedFoods = ["", ""]
+    var dislikedFoods: [String] = []
     var previousWeights: [String] = []
     
+    var breakfast: [String] = []
+    var lunch: [String] = []
+    var dinner: [String] = []
+    
+    var allowedCalories: Double = 0
    
     static let `default` = Profile(username: "Username")
  

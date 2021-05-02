@@ -32,6 +32,7 @@ struct ContentView: View {
                         .environmentObject(modelData)
                 case.mealEntry:
                     MealEntryHost(viewRouter: viewRouter)
+                        .environmentObject(modelData)
                 case.weightEntry:
                     WeightEntryHost()
                         .environmentObject(modelData)
