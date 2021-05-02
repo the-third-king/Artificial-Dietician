@@ -55,7 +55,9 @@ struct MealDetail: View {
                     if showDetail{
                         Button(action: {
                             showDetail = false
-                            appendingArray.append(meal.itemName)
+                            for i in 0..<modelData.meal.servings{
+                                appendingArray.append(meal.itemName)
+                            }
                         }) {
                             Text("Confirm")
                         }
