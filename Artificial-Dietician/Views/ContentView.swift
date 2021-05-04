@@ -19,7 +19,7 @@ struct ContentView: View {
             VStack{  
                 TopBarHost(viewRouter: viewRouter)
                     .frame(width: geometry.size.width,
-                           height: 70)
+                           height: 75)
                                 .background(LinearGradient(gradient: Gradient(colors: [.white, Color("Mint")]),
                                                            startPoint: .top,
                                                            endPoint: .bottom))
@@ -41,7 +41,8 @@ struct ContentView: View {
                     ProfileHost()
                         .environmentObject(modelData)
                 case.notification:
-                    Text("Notifications Page")
+                    NotificationList()
+                        .environmentObject(modelData)
                 case.logOut:
                     Text("Log Out of Account")
                 }

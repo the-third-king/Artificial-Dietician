@@ -31,6 +31,9 @@ struct Profile: Hashable, Codable{
     var dinner: [String] = []
     
     var allowedCalories: Double = 0
+    
+    var goalWeight = ""
+    var numberNotifications = 0
    
     static let `default` = Profile(username: "Username")
  

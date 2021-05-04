@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C4026950263A3B79008CC931 /* MealEntryHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402694F263A3B79008CC931 /* MealEntryHost.swift */; };
+		C419DD8F2640BC5B0052C435 /* RecommendedFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419DD8E2640BC5B0052C435 /* RecommendedFood.swift */; };
+		C419DD922640CA160052C435 /* NotificationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419DD912640CA160052C435 /* NotificationDetail.swift */; };
+		C419DD942640CA280052C435 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419DD932640CA280052C435 /* NotificationList.swift */; };
+		C419DD962640CCEB0052C435 /* NotificationPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419DD952640CCEB0052C435 /* NotificationPreview.swift */; };
+		C419DD982640E5C70052C435 /* NotificationNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419DD972640E5C70052C435 /* NotificationNumber.swift */; };
 		C4259D5826268479004C4238 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4259D5726268479004C4238 /* ViewController.swift */; };
 		C43478BC263CC39500BC4FC8 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43478BB263CC39500BC4FC8 /* MealDetail.swift */; };
 		C43A3732263CED6F00A6C0D3 /* MealType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A3731263CED6F00A6C0D3 /* MealType.swift */; };
@@ -22,7 +27,6 @@
 		C48402A42630F760007F439A /* BorderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48402A32630F760007F439A /* BorderedTextView.swift */; };
 		C48402A82630F83C007F439A /* TextFieldClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48402A72630F83C007F439A /* TextFieldClearButton.swift */; };
 		C48402AC2630F8FF007F439A /* TabBarIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48402AB2630F8FF007F439A /* TabBarIconView.swift */; };
-		C48402B32630FAE6007F439A /* NotificationNumLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48402B22630FAE6007F439A /* NotificationNumLabelView.swift */; };
 		C49DE91D26251848002FC058 /* Artificial_DieticianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DE91C26251848002FC058 /* Artificial_DieticianApp.swift */; };
 		C49DE91F26251848002FC058 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DE91E26251848002FC058 /* ContentView.swift */; };
 		C49DE92126251848002FC058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49DE92026251848002FC058 /* Assets.xcassets */; };
@@ -49,6 +53,11 @@
 		1D24785322E6076B57B80B79 /* Pods-Artificial-Dietician.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artificial-Dietician.release.xcconfig"; path = "Target Support Files/Pods-Artificial-Dietician/Pods-Artificial-Dietician.release.xcconfig"; sourceTree = "<group>"; };
 		6B2BD2B43CEEF3BE201D7200 /* Pods-Artificial-Dietician.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artificial-Dietician.debug.xcconfig"; path = "Target Support Files/Pods-Artificial-Dietician/Pods-Artificial-Dietician.debug.xcconfig"; sourceTree = "<group>"; };
 		C402694F263A3B79008CC931 /* MealEntryHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealEntryHost.swift; sourceTree = "<group>"; };
+		C419DD8E2640BC5B0052C435 /* RecommendedFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedFood.swift; sourceTree = "<group>"; };
+		C419DD912640CA160052C435 /* NotificationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetail.swift; sourceTree = "<group>"; };
+		C419DD932640CA280052C435 /* NotificationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationList.swift; sourceTree = "<group>"; };
+		C419DD952640CCEB0052C435 /* NotificationPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPreview.swift; sourceTree = "<group>"; };
+		C419DD972640E5C70052C435 /* NotificationNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNumber.swift; sourceTree = "<group>"; };
 		C4259D5726268479004C4238 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C43478BB263CC39500BC4FC8 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		C43A3731263CED6F00A6C0D3 /* MealType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealType.swift; sourceTree = "<group>"; };
@@ -63,7 +72,6 @@
 		C48402A32630F760007F439A /* BorderedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedTextView.swift; sourceTree = "<group>"; };
 		C48402A72630F83C007F439A /* TextFieldClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClearButton.swift; sourceTree = "<group>"; };
 		C48402AB2630F8FF007F439A /* TabBarIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIconView.swift; sourceTree = "<group>"; };
-		C48402B22630FAE6007F439A /* NotificationNumLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNumLabelView.swift; sourceTree = "<group>"; };
 		C49DE91926251848002FC058 /* Artificial-Dietician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Artificial-Dietician.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49DE91C26251848002FC058 /* Artificial_DieticianApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artificial_DieticianApp.swift; sourceTree = "<group>"; };
 		C49DE91E26251848002FC058 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 				C4429AA2263CA9180097DCFF /* MealLookup.swift */,
 				C43478BB263CC39500BC4FC8 /* MealDetail.swift */,
 				C4C453F4263B9FD600818DFF /* SearchResult.swift */,
+				C419DD8E2640BC5B0052C435 /* RecommendedFood.swift */,
 				C4429AA0263CA8800097DCFF /* ManualEntry.swift */,
 				C4C453EE263B7A4800818DFF /* Meal.swift */,
 			);
@@ -148,6 +157,17 @@
 				C4D5B437263A41200031EAEB /* HomeHost.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C419DD902640C9E10052C435 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				C419DD932640CA280052C435 /* NotificationList.swift */,
+				C419DD952640CCEB0052C435 /* NotificationPreview.swift */,
+				C419DD912640CA160052C435 /* NotificationDetail.swift */,
+				C419DD972640E5C70052C435 /* NotificationNumber.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		C49DE91026251848002FC058 = {
@@ -224,7 +244,6 @@
 		C4B35C9E2638FAA600DFF783 /* SharedPageViews */ = {
 			isa = PBXGroup;
 			children = (
-				C48402B22630FAE6007F439A /* NotificationNumLabelView.swift */,
 				C48402952630EB40007F439A /* PageLabelView.swift */,
 				C484029D2630F48C007F439A /* UserEnteryView.swift */,
 				C48402A32630F760007F439A /* BorderedTextView.swift */,
@@ -262,6 +281,7 @@
 				C4B35C942638F67900DFF783 /* WeightEntry */,
 				C4B3350A2637AD6500C55CAA /* Account */,
 				C4B35C9E2638FAA600DFF783 /* SharedPageViews */,
+				C419DD902640C9E10052C435 /* Notifications */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,7 +408,9 @@
 				C43A3732263CED6F00A6C0D3 /* MealType.swift in Sources */,
 				C44061AE263F3C65009886D0 /* MealsList.swift in Sources */,
 				C4429AA3263CA9180097DCFF /* MealLookup.swift in Sources */,
+				C419DD982640E5C70052C435 /* NotificationNumber.swift in Sources */,
 				C4C4B24F2638DD1D0026EBB1 /* ProfileEditingBar.swift in Sources */,
+				C419DD922640CA160052C435 /* NotificationDetail.swift in Sources */,
 				C4C4B2442638CFF80026EBB1 /* ProfileHost.swift in Sources */,
 				C4C453F1263B883F00818DFF /* FlimsViewController.swift in Sources */,
 				C4026950263A3B79008CC931 /* MealEntryHost.swift in Sources */,
@@ -408,10 +430,12 @@
 				C4429AA1263CA8800097DCFF /* ManualEntry.swift in Sources */,
 				C4C453EF263B7A4800818DFF /* Meal.swift in Sources */,
 				C4B35C962638F6AD00DFF783 /* WeightEntryHost.swift in Sources */,
+				C419DD8F2640BC5B0052C435 /* RecommendedFood.swift in Sources */,
+				C419DD962640CCEB0052C435 /* NotificationPreview.swift in Sources */,
 				C4D5B438263A41200031EAEB /* HomeHost.swift in Sources */,
 				C49DE91D26251848002FC058 /* Artificial_DieticianApp.swift in Sources */,
 				C4C4B2472638D0980026EBB1 /* ProfileSummary.swift in Sources */,
-				C48402B32630FAE6007F439A /* NotificationNumLabelView.swift in Sources */,
+				C419DD942640CA280052C435 /* NotificationList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

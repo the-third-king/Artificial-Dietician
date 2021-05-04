@@ -26,6 +26,8 @@ struct ProfileSummary: View {
                 Text("Sex: \(modelData.profile.sex)")
                 Text("Age (Years): \(modelData.profile.age)")
                 Text("Height (Inches): \(modelData.profile.height)")
+                Text("Weight (lbs): \(modelData.profile.weight)")
+                Text("Goal Weight (lbs): \(modelData.profile.goalWeight)")
             }
         }
     }

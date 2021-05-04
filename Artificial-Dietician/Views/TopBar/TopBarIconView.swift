@@ -23,7 +23,6 @@ struct TopBarIconView: View {
             .frame(width: 16, height: 16)
             .padding(.top, 40)
             .padding(edge, 10)
-            //.overlay(NotificationNumLabel(number: $labelNumber))
             .onTapGesture{
                 viewRouter.currentPage = assignedPage
             }

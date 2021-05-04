@@ -39,7 +39,9 @@ struct ProfileEditor: View {
                 ProfileEditingBar(text: "Height",
                                   textFieldText: "Height",
                                   enteredValue: $profile.height)
-                
+                ProfileEditingBar(text: "Goal Weight",
+                                  textFieldText: "Goal Weight",
+                                  enteredValue: $profile.goalWeight)
             }
         }
     }

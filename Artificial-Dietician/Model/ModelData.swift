@@ -18,9 +18,14 @@ final class ModelData: ObservableObject{
 
 func FindCalories(modelData: ModelData) -> Double{
     var allowedCalories = 0.0
+    var weight: Double = 0.0
+    for i in 0..<modelData.profile.previousWeights.count {
+        weight += Double(modelData.profile.previousWeights[i])!
+    }
+    weight = weight / Double(modelData.profile.previousWeights.count)
     let age: Double = Double(modelData.profile.age)!
     let height: Double = Double(modelData.profile.height)!
-    let weight: Double = Double(modelData.profile.weight)!
+    //let weight: Double = Double(modelData.profile.weight)!
     if modelData.profile.sex == "M" {
         allowedCalories = (10.0 * weight / 2.2)
         allowedCalories += (6.25 * height * 2.54)

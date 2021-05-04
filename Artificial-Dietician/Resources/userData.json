@@ -15,7 +15,9 @@
         "breakfast": ["Egg"],
         "lunch": ["Ham"],
         "dinner": ["Hamburger", "Broccoli"],
-        "allowedCalories": 0
+        "allowedCalories": 0,
+        "goalWeight": "220",
+        "numberNotifications": 0
     },
     {
         "username": "theGoat",
@@ -33,7 +35,9 @@
         "breakfast": [],
         "lunch": [],
         "dinner": [],
-        "allowedCalories": 0
+        "allowedCalories": 0,
+        "goalWeight": "240",
+        "numberNotifications": 0
     },
     {
         "username": "newbie",
@@ -51,7 +55,9 @@
         "breakfast": [],
         "lunch": [],
         "dinner": [],
-        "allowedCalories": 0
+        "allowedCalories": 0,
+        "goalWeight": "150",
+        "numberNotifications": 0
     }
 ]
 

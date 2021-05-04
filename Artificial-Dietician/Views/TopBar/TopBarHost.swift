@@ -11,6 +11,7 @@ import SwiftUI
 struct TopBarHost: View {
     
     @StateObject var viewRouter: ViewRouter
+    //@EnvironmentObject var modelData: ModelData
     
     var body: some View {
         GeometryReader { geometry in
@@ -19,6 +20,8 @@ struct TopBarHost: View {
                                assignedPage: .notification,
                                edge: .leading,
                                systemIconName: "bell")
+                    //.overlay(NotificationNumber().environmentObject(modelData)
+                                //.offset(x: -130, y: 40))
                 Spacer()
                 Text("Artificial Dietician")
                     .bold()
@@ -38,6 +41,7 @@ struct TopBar_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             TopBarHost(viewRouter: ViewRouter())
+                //.environmentObject(ModelData())
         }
     }
 }

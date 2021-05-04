@@ -50,6 +50,13 @@ struct MealEntryHost: View {
                     MealsList(mealType: $modelData.profile.dinner)
                         .environmentObject(modelData)
                         .offset(y: -24)
+                    NavigationLink(destination: RecommendedFood().environmentObject(modelData)){
+                        Text("Recommended Meals List")
+                            .frame(width: 365, height: 75, alignment: .center)
+                            .font(.system(size: 25))
+                            .background(Color("OpacMint"))
+                            .cornerRadius(20)
+                    }
                 }
                 .navigationBarTitleDisplayMode(.inline)
             }
