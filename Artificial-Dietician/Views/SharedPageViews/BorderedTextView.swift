@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BorderedTextView: View {
     
-    let informativeText: String
+    let informativeText: String //The information in the shape
     
     var body: some View {
         HStack{

@@ -2,15 +2,16 @@
 //  SearchBar.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 4/30/21.
+//  This creates the search bar for finding meals
+//  Created by Cameron Triplett on 4/30/21.
 //
 
 import SwiftUI
 
 struct SearchBar: View {
     
-    @Binding var text: String
-    @State private var isEditing = false
+    @Binding var text: String //What the user will enter into the search bar
+    @State private var isEditing = false //if editing add cancel button
     
     var body: some View {
         HStack{
@@ -41,6 +42,7 @@ struct SearchBar: View {
                 .onTapGesture {
                     self.isEditing = true
                 }
+            //create the cancel button for while editing
             if isEditing{
                 Button(action: {
                     self.isEditing = false

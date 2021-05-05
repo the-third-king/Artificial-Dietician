@@ -140,8 +140,8 @@
 				C402694F263A3B79008CC931 /* MealEntryHost.swift */,
 				C44061AD263F3C65009886D0 /* MealsList.swift */,
 				C43A3731263CED6F00A6C0D3 /* MealType.swift */,
-				C4429A9E263CA17C0097DCFF /* SearchBar.swift */,
 				C4429AA2263CA9180097DCFF /* MealLookup.swift */,
+				C4429A9E263CA17C0097DCFF /* SearchBar.swift */,
 				C43478BB263CC39500BC4FC8 /* MealDetail.swift */,
 				C4C453F4263B9FD600818DFF /* SearchResult.swift */,
 				C419DD8E2640BC5B0052C435 /* RecommendedFood.swift */,
@@ -195,9 +195,7 @@
 				C4F25848263227CB0015F32A /* Views */,
 				C4C4B2492638D7680026EBB1 /* Model */,
 				C402694B263A2BE8008CC931 /* Resources */,
-				C4259D5726268479004C4238 /* ViewController.swift */,
-				C4F2584E26324EE30015F32A /* NutritionIXLinker.swift */,
-				C4C453F0263B883F00818DFF /* FlimsViewController.swift */,
+				C4A765BC2643430400A6F244 /* Non-implemented Connections */,
 				C49DE92026251848002FC058 /* Assets.xcassets */,
 				C49DE92526251848002FC058 /* Info.plist */,
 				C49DE92226251848002FC058 /* Preview Content */,
@@ -211,6 +209,16 @@
 				C49DE92326251848002FC058 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C4A765BC2643430400A6F244 /* Non-implemented Connections */ = {
+			isa = PBXGroup;
+			children = (
+				C4259D5726268479004C4238 /* ViewController.swift */,
+				C4F2584E26324EE30015F32A /* NutritionIXLinker.swift */,
+				C4C453F0263B883F00818DFF /* FlimsViewController.swift */,
+			);
+			path = "Non-implemented Connections";
 			sourceTree = "<group>";
 		};
 		C4B3350A2637AD6500C55CAA /* Account */ = {

@@ -10,12 +10,15 @@ import SwiftUI
 
 struct TopBarHost: View {
     
+    //To change pages
     @StateObject var viewRouter: ViewRouter
     //@EnvironmentObject var modelData: ModelData
     
     var body: some View {
+        //read size of screen
         GeometryReader { geometry in
             HStack{
+                //Notification Icon
                 TopBarIconView(viewRouter: viewRouter,
                                assignedPage: .notification,
                                edge: .leading,
@@ -23,11 +26,13 @@ struct TopBarHost: View {
                     //.overlay(NotificationNumber().environmentObject(modelData)
                                 //.offset(x: -130, y: 40))
                 Spacer()
+                //Title
                 Text("Artificial Dietician")
                     .bold()
                     .padding(.top, 40)
                     .font(Font.system(size: 25))
                 Spacer()
+                //Logout Icon
                 TopBarIconView(viewRouter: viewRouter,
                                assignedPage: .logOut,
                                edge: .trailing,

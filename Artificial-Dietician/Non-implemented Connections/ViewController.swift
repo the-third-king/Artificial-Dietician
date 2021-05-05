@@ -2,8 +2,9 @@
 //  UIViewAlert.swift
 //  Artificial-Dietician
 //
+//  This file connects mongoDB
 //  Created by Cameron Triplett on 4/13/21.
-//
+//  Not implemented yet
 
 import UIKit
 import MongoSwift

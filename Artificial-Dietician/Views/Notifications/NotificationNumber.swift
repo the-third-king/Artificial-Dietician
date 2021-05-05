@@ -3,7 +3,7 @@
 //  Artificial-Dietician
 //
 //  Created by Cameron Triplett on 5/3/21.
-//
+//  not implemented yet becuase of an infiinite loop somewhere
 
 import SwiftUI
 /*

@@ -10,8 +10,8 @@ import SwiftUI
 
 struct WeightEntryHost: View {
     
-    @EnvironmentObject var modelData: ModelData
-    @State private var weight: String  = ""
+    @EnvironmentObject var modelData: ModelData  //for the user instance
+    @State private var weight: String  = ""  //weight the user is entering
     //@State private var previousWeights: [String] = []
     
     var body: some View {
@@ -40,6 +40,7 @@ struct WeightEntryHost: View {
             }
             Divider().frame(height: 5).background(Color("Mint"))
             
+            //Previous five days weights
             ScrollView{
                 Text("Previous Weights")
                     .font(Font.system(size: 30))

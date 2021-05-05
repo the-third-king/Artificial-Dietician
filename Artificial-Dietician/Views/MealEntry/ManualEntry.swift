@@ -2,22 +2,23 @@
 //  ManualEntry.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 4/30/21.
-//
+//  This page is for manual entry of food
+//  Created by Cameron Triplett on 4/30/21.
+//  Not implemented yet
 
 import SwiftUI
 
 struct ManualEntry: View {
     
-    @State private var mealName: String = ""
-    @State private var calories: String = ""
-    @State private var protien: String = ""
-    @State private var carbs: String = ""
+    @State private var mealName: String = ""  // for the user to enter
+    @State private var calories: String = ""  // for the user to enter
+    @State private var protien: String = ""  //for the user to enter
+    @State private var carbs: String = ""  //for the user to enter
     
     var body: some View {
         VStack{
-            UserEnteryView(text: "Meal Type",
-                           textFieldText: "Meal Type",
+            UserEnteryView(text: "Meal Name",
+                           textFieldText: "Meal Name",
                            enteredValue: $mealName,
                            numPad: false)
             
@@ -35,7 +36,7 @@ struct ManualEntry: View {
                            textFieldText: "Carbohydrates",
                            enteredValue: $carbs,
                            numPad: true)
-            
+            //Button to enter all of the information
             Button{
                 print("Information entered")
                 

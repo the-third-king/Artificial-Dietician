@@ -11,7 +11,9 @@ import SwiftUI
 @main
 struct Artificial_DieticianApp: App {
     
+    //For the meal instance and profile instance
     @StateObject private var modelData = ModelData()
+    //for moving between pages
     @StateObject var viewRouter = ViewRouter()
     
     var body: some Scene {

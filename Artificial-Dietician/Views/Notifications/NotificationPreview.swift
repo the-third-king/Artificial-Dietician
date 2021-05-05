@@ -2,6 +2,7 @@
 //  NotificationPreview.swift
 //  Artificial-Dietician
 //
+//  This page is what a notification preview would look like
 //  Created by Cameron Triplett on 5/3/21.
 //
 
@@ -9,15 +10,16 @@ import SwiftUI
 
 struct NotificationPreview: View {
     
-    @State var read: Bool = false
-    var title: String
-    var contentPreview: String
+    @State var read: Bool = false //If the notification has been read
+    var title: String //The tile of the notification
+    var contentPreview: String //The content of the notification
 
     
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 HStack {
+                    //if not read then show unread symbol else take off unread symbol
                     if !read{
                         Circle()
                             .fill(Color.blue)
@@ -29,7 +31,7 @@ struct NotificationPreview: View {
                             .bold()
                             .padding([.leading, .top], 6)
                         Text(contentPreview)
-                            .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                            .lineLimit(2)
                             .padding([.leading, .bottom,. trailing], 6)
                         Spacer()
                     }
@@ -39,8 +41,9 @@ struct NotificationPreview: View {
             .border(Color("Mint"),width: 5)
             .background(Color("OpacMint"))
         }
+        //when tapped twice the unread symbol turns off
         .onTapGesture(count: 2, perform: {
-            read = true
+            read.toggle()
         })
     }
 }

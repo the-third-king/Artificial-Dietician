@@ -10,10 +10,11 @@ import SwiftUI
 
 struct ProfileSummary: View {
     
-    @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var modelData: ModelData  //For the profile instance
     //var profile: Profile
     
     var body: some View {
+        //Show profile info
         ScrollView{
             VStack(alignment: .leading, spacing: 10){
                 Text("\(modelData.profile.f_name) \(modelData.profile.l_name)")

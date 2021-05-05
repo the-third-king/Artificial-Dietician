@@ -2,18 +2,20 @@
 //  MealsList.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 5/2/21.
+//  This file will show the list of foods eaten so far
+//  Created by Cameron Triplett on 5/2/21.
 //
 
 import SwiftUI
 
 struct MealsList: View {
     
-    @EnvironmentObject var modelData: ModelData
-    @Binding var mealType: [String]
+    @EnvironmentObject var modelData: ModelData  //For the users food so far
+    @Binding var mealType: [String] //Meal array grab
     
     var body: some View {
         VStack {
+            //For each meal print the name and macros
             ForEach(mealType, id: \.self) { meal in
                 HStack{
                     Text(meal)

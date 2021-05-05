@@ -2,8 +2,9 @@
 //  NutritionIXLinker.swift
 //  Artificial-Dietician
 //
+//  This file connects to nutritionix API
 //  Created by Cameron Triplett on 4/22/21.
-//
+//  Not implemented yet
 
 import Foundation
 

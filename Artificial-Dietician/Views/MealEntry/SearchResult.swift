@@ -2,14 +2,15 @@
 //  SearchResult.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 4/29/21.
+//  This page creates the preview for the list of the food
+//  Created by Cameron Triplett on 4/29/21.
 //
 
 import SwiftUI
 
 struct SearchResult: View {
     
-    var meal: Meal
+    var meal: Meal //This is the meal for the meal information
     
     var body: some View {
         HStack{

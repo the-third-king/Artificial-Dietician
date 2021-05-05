@@ -9,14 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
+    //For moving between pages
     @StateObject var viewRouter: ViewRouter
+    //For creating instances of profile and meal
     @EnvironmentObject var modelData: ModelData
     
     
     
     var body: some View {
+        //reads the size of the screen
         GeometryReader { geometry in
-            VStack{  
+            VStack{
+                //Notifs/Title/logout
                 TopBarHost(viewRouter: viewRouter)
                     .frame(width: geometry.size.width,
                            height: 75)
@@ -26,6 +30,7 @@ struct ContentView: View {
                                 .shadow(radius: 2)
                                 .ignoresSafeArea(.keyboard, edges: .bottom)
                 Spacer()
+                //For each page if clicked
                 switch viewRouter.currentPage{
                 case.home:
                     HomeHost()
@@ -49,6 +54,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
+                //Bottom navigation bar to change pages if clicked on
                 HStack{
                     Spacer()
                     TabBarIconView(viewRouter: viewRouter,

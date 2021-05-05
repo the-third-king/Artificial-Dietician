@@ -10,14 +10,15 @@ import SwiftUI
 
 struct UserEnteryView: View {
     
-    let text: String
-    let textFieldText: String
-    @Binding var enteredValue: String
-    let numPad: Bool
+    let text: String  //Textfield label
+    let textFieldText: String  //text field removeable label
+    @Binding var enteredValue: String //user entered value
+    let numPad: Bool  //is the value number only
     
     
     var body: some View {
         HStack{
+            //if value is number only show number pad keyboard else show full keyboard
             if(numPad){
                 Text(text)
                 Spacer()
@@ -36,13 +37,12 @@ struct UserEnteryView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.trailing, 4)
             }
-            //store carbs into database
         }
     }
 }
 
 struct UserEnteryView_Previews: PreviewProvider {
     static var previews: some View {
-        UserEnteryView(text: "", textFieldText: "", enteredValue: Binding.constant(""), numPad: false)
+        UserEnteryView(text: "Text", textFieldText: "Text", enteredValue: Binding.constant(""), numPad: false)
     }
 }

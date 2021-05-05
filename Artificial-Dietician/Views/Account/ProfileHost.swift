@@ -10,13 +10,14 @@ import SwiftUI
 
 struct ProfileHost: View {
     
-    @Environment(\.editMode) var editMode
-    @EnvironmentObject var modelData: ModelData
-    @State private var draftProfile = Profile.default
+    @Environment(\.editMode) var editMode  //For the edit mode of the user profile
+    @EnvironmentObject var modelData: ModelData  //instance of the user
+    @State private var draftProfile = Profile.default  //default profile for editing purposes
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20){
             HStack{
+                //Cancel mode while editing
                 if editMode?.wrappedValue == .active {
                     Button("Cancel"){
                         draftProfile = modelData.profile
@@ -27,6 +28,7 @@ struct ProfileHost: View {
                 EditButton()
             }
             
+            //If editing is inactive show profile else show the edited profile
             if editMode?.wrappedValue == .inactive{
                 ProfileSummary()
             }else{

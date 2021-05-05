@@ -2,6 +2,7 @@
 //  MealDetail.swift
 //  Artificial-Dietician
 //
+//  This page shows the details of the food selected
 //  Created by Cameron Triplett on 4/30/21.
 //
 
@@ -9,14 +10,16 @@ import SwiftUI
 
 struct MealDetail: View {
     
-    @State private var showDetail = false
-    @EnvironmentObject var modelData: ModelData
-    var meal: Meal
-    @StateObject var viewRouter: ViewRouter
-    @Binding var appendingArray: [String]
+    @State private var showDetail = false //Show the servings wheel
+    @EnvironmentObject var modelData: ModelData //The meal instance
+    var meal: Meal //The actual meal information
+    @StateObject var viewRouter: ViewRouter //To change the page
+    @Binding var appendingArray: [String] //breakfast/lunch/dinner getting the meal
     
     var body: some View {
+        //read size of screen
         GeometryReader { geometry in
+            //Give item name, calories, protein, carbs, and fat in a scrollable view
             ScrollView{
                 Text(meal.itemName)
                     .font(.system(size: 40, weight: .black, design: .rounded))
@@ -45,6 +48,7 @@ struct MealDetail: View {
                 .frame(width: geometry.size.width, height: 100, alignment: .center)
                 .border(Color.black)
                 
+                //create serving wheel
                 HStack{
                     VStack(alignment: .leading){
                         Text("Amount of Servings")
@@ -52,6 +56,7 @@ struct MealDetail: View {
                         Text("Serving size \(meal.servingSize) \(meal.servingSizeUnit)")
                     }
                     Spacer()
+                    //if button pressed show serving wheel
                     if showDetail{
                         Button(action: {
                             showDetail = false
@@ -59,11 +64,13 @@ struct MealDetail: View {
                                 appendingArray.append(meal.itemName)
                             }
                         }) {
+                            //add to array with servings
                             Text("Confirm")
                         }
                         
                     }
                     Spacer()
+                    //create button to show serving wheel
                     Button(action: {
                         self.showDetail.toggle()
                     }) {
@@ -74,6 +81,7 @@ struct MealDetail: View {
                             .animation(.easeInOut)
                     }
                 }
+                //This is the wheel
                 if showDetail {
                     Picker("Amount of Servings", selection: $modelData.meal.servings){
                         ForEach(1...100, id: \.self){

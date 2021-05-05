@@ -10,9 +10,10 @@ import SwiftUI
 
 struct HomeHost: View {
     
-    @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var modelData: ModelData  //To get the info of the profile instance
     
     var body: some View {
+        //print viewable object with the user information for cal, prot, carb, fat, and weight
         VStack{
             PageLabelView(pageTitle: "Home")
             

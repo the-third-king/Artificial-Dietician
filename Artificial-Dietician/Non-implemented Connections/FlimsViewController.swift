@@ -2,8 +2,9 @@
 //  FlimsViewController.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 4/29/21.
-//
+//  This file fetches information from nutritionix API
+//  Created by Cameron Triplett on 4/29/21.
+//  Not implemented yet
 
 import Foundation
 import SwiftUI

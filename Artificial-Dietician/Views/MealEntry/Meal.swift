@@ -2,6 +2,7 @@
 //  Meal.swift
 //  Artificial-Dietician
 //
+//  Class of the meal instance
 //  Created by Cameron Triplett on 4/29/21.
 //
 
@@ -19,6 +20,7 @@ struct Meal: Hashable, Codable{
     var servingSizeUnit: String
     var servings: Int
     
+    //default meal for editing purposes
     static let `default` = Meal(itemName: "Item",
                                 calories: 0,
                                 fat: 0,

@@ -2,14 +2,15 @@
 //  MealType.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 4/30/21.
+//  This file is for the container of the mealtype
+//  Created by Cameron Triplett on 4/30/21.
 //
 
 import SwiftUI
 
 struct MealType: View {
     
-    var mealName: String
+    var mealName: String  //Breakfast/lunch/dinner
     
     var body: some View {
         ZStack{

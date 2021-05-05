@@ -2,15 +2,16 @@
 //  Notification.swift
 //  Artificial-Dietician
 //
-//  Created by user192665 on 5/3/21.
+//  The notification details page
+//  Created by Cameron Triplett on 5/3/21.
 //
 
 import SwiftUI
 
 struct NotificationDetail: View {
     
-    var title: String
-    var content: String
+    var title: String //notification title
+    var content: String //notification details
     
     var body: some View {
         VStack(alignment: .leading){

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PageLabelView: View {
     
-    var pageTitle: String
+    var pageTitle: String  //page title
     
     var body: some View {
             Text(pageTitle)
@@ -24,6 +24,6 @@ struct PageLabelView: View {
 
 struct PageLabelView_Previews: PreviewProvider {
     static var previews: some View {
-        PageLabelView(pageTitle: "")
+        PageLabelView(pageTitle: "Title")
     }
 }

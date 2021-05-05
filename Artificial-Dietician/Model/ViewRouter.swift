@@ -10,9 +10,9 @@ import SwiftUI
 
 class ViewRouter: ObservableObject{
     
-    @Published var currentPage: Page = .home
+    @Published var currentPage: Page = .home  //What the assigne page is
 }
-
+//cases for the pages
 enum Page{
     case home
     case mealEntry
